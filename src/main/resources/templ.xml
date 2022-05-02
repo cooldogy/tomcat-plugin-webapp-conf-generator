@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Context path="${path}" reloadable="false" docBase="${workDir}/webapp" workDir="${workDir}/work">
+
+    <!-- Extra info begin -->
+    <Parameter name="TOMCAT_PARAM_DEFAULT_SCHEMA" value="${param}" override="false" />>
+    <Resource
+        name="jdbc/aisyc"
+        type="javax.sql.DataSource"
+        driverClassName="${driverName}"
+        url="${url}"
+        username="${username}"
+        password="${password}"
+
+        testWhileIdle="true"
+        testOnBorrow="true"
+        testOnReturn="false"
+        validationQuery="SELECT 1"
+        validationInterval="30000"
+        timeBetweenEvictionRunsMillis="60000"
+        minIdle="25"
+        maxIdle="50"
+        maxWait="10000"
+        maxActive="150"
+        initialSize="10"
+        removeAbandonedTimeout="60"
+        removeAbandoned="true"
+        logAbandoned="true"
+        minEvictableIdleTimeMillis="60000"
+        jmxEnabled="true"
+    />
+    <Resource
+        name="jdbc/aisyc.log"
+        type="javax.sql.DataSource"
+        driverClassName="${driverName}"
+        url="${url}"
+        username="${username}"
+        password="${password}"
+
+        testWhileIdle="true"
+        testOnBorrow="true"
+        testOnReturn="false"
+        validationQuery="SELECT 1"
+        validationInterval="30000"
+        timeBetweenEvictionRunsMillis="60000"
+        minIdle="25"
+        maxIdle="50"
+        maxWait="10000"
+        maxActive="150"
+        initialSize="10"
+        removeAbandonedTimeout="60"
+        removeAbandoned="true"
+        logAbandoned="true"
+        minEvictableIdleTimeMillis="60000"
+        jmxEnabled="true"
+    />
+    <!-- Extra info end -->
+
+</Context>
